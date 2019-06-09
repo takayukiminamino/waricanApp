@@ -36,6 +36,10 @@
                                 <rect key="frame" x="176" y="752" width="62" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="はじめる"/>
+                                <connections>
+                                    <action selector="startButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="di8-jl-Qcf"/>
+                                    <segue destination="zIv-rX-fry" kind="show" identifier="goToSecondScreen" id="KpH-vF-wqr"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -44,11 +48,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="191" y="119"/>
         </scene>
-        <!--View Controller-->
+        <!--Second View Controller-->
         <scene sceneID="chZ-SC-9r8">
             <objects>
-                <viewController id="zIv-rX-fry" sceneMemberID="viewController">
+                <viewController id="zIv-rX-fry" customClass="SecondViewController" customModule="waricanDrive" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="B0i-GR-nA9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -58,12 +63,20 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="次へ"/>
+                                <connections>
+                                    <action selector="nextButtonPressed:" destination="zIv-rX-fry" eventType="touchUpInside" id="e65-J1-tui"/>
+                                    <segue destination="8fn-Lq-GiM" kind="show" identifier="goToThirdScreen" id="BSa-Dx-vB7"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kdo-F5-5aU">
                                 <rect key="frame" x="36" y="777" width="41" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="戻る"/>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="zIv-rX-fry" eventType="touchUpInside" id="fdU-bo-JQ1"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="backToTopScreen" id="ZdQ-ty-qKT"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="参加人数は" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdN-Jg-BM3">
                                 <rect key="frame" x="131" y="346" width="152" height="36"/>
@@ -95,10 +108,10 @@
             </objects>
             <point key="canvasLocation" x="881" y="119"/>
         </scene>
-        <!--View Controller-->
+        <!--Third View Controller-->
         <scene sceneID="KQP-zd-gn9">
             <objects>
-                <viewController id="8fn-Lq-GiM" sceneMemberID="viewController">
+                <viewController id="8fn-Lq-GiM" customClass="ThirdViewController" customModule="waricanDrive" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZIv-MH-FGM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -205,12 +218,20 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="次へ"/>
+                                <connections>
+                                    <action selector="nextButtonPressed:" destination="8fn-Lq-GiM" eventType="touchUpInside" id="h5W-IZ-C1W"/>
+                                    <segue destination="ay4-nZ-1QD" kind="show" identifier="goToFourthScreen" id="jWL-fS-mkA"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wOK-B5-9dR">
                                 <rect key="frame" x="34" y="781" width="41" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="戻る"/>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="8fn-Lq-GiM" eventType="touchUpInside" id="L8q-gD-gS6"/>
+                                    <segue destination="zIv-rX-fry" kind="show" identifier="backToSecondScreen" id="09u-Vz-zjM"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -221,10 +242,10 @@
             </objects>
             <point key="canvasLocation" x="1587" y="119"/>
         </scene>
-        <!--View Controller-->
+        <!--Seventh View Controller-->
         <scene sceneID="Gsv-Sh-OXg">
             <objects>
-                <viewController id="FiN-nu-cFA" sceneMemberID="viewController">
+                <viewController id="FiN-nu-cFA" customClass="SeventhViewController" customModule="waricanDrive" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KGx-I5-5zr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -331,12 +352,20 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="次へ"/>
+                                <connections>
+                                    <action selector="nextButtonPressed:" destination="FiN-nu-cFA" eventType="touchUpInside" id="zJJ-JJ-e2D"/>
+                                    <segue destination="E3l-3P-TnK" kind="show" identifier="goToEighthScreen" id="fZD-si-chi"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wdl-Gl-X5I">
                                 <rect key="frame" x="34" y="781" width="41" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="戻る"/>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="FiN-nu-cFA" eventType="touchUpInside" id="YYU-rg-aNH"/>
+                                    <segue destination="ktO-fx-Ohl" kind="show" identifier="backToSixScreen" id="OXi-t1-Wsu"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -347,10 +376,10 @@
             </objects>
             <point key="canvasLocation" x="4329" y="119"/>
         </scene>
-        <!--View Controller-->
+        <!--Sixth View Controller-->
         <scene sceneID="Dn0-Eb-kwx">
             <objects>
-                <viewController id="ktO-fx-Ohl" sceneMemberID="viewController">
+                <viewController id="ktO-fx-Ohl" customClass="SixthViewController" customModule="waricanDrive" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IVz-NW-BXK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -457,12 +486,20 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="次へ"/>
+                                <connections>
+                                    <action selector="nextButtonPressed:" destination="ktO-fx-Ohl" eventType="touchUpInside" id="jB4-SR-NAO"/>
+                                    <segue destination="FiN-nu-cFA" kind="show" identifier="goToSeventhScreen" id="Lod-eh-lMt"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="80b-6j-nFu">
                                 <rect key="frame" x="34" y="781" width="41" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="戻る"/>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="ktO-fx-Ohl" eventType="touchUpInside" id="CLU-rW-BR8"/>
+                                    <segue destination="RRB-AJ-gTT" kind="show" identifier="backToFifthScreen" id="8qV-bl-02Z"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -473,10 +510,10 @@
             </objects>
             <point key="canvasLocation" x="3658" y="119"/>
         </scene>
-        <!--View Controller-->
+        <!--Fifth View Controller-->
         <scene sceneID="oVp-cB-Ba6">
             <objects>
-                <viewController id="RRB-AJ-gTT" sceneMemberID="viewController">
+                <viewController id="RRB-AJ-gTT" customClass="FifthViewController" customModule="waricanDrive" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cBY-jD-KfX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -583,12 +620,20 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="次へ"/>
+                                <connections>
+                                    <action selector="nextButtonPressed:" destination="RRB-AJ-gTT" eventType="touchUpInside" id="tbp-0w-gsw"/>
+                                    <segue destination="ktO-fx-Ohl" kind="show" identifier="goToSixthScreen" id="qwU-O0-qCX"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rah-KD-QcL">
                                 <rect key="frame" x="34" y="781" width="41" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="戻る"/>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="RRB-AJ-gTT" eventType="touchUpInside" id="tBr-8Z-atd"/>
+                                    <segue destination="ay4-nZ-1QD" kind="show" identifier="backToFourthScreen" id="euh-ky-LNe"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -599,10 +644,10 @@
             </objects>
             <point key="canvasLocation" x="2964" y="119"/>
         </scene>
-        <!--View Controller-->
+        <!--Fourth View Controller-->
         <scene sceneID="Mlw-FP-znt">
             <objects>
-                <viewController id="ay4-nZ-1QD" sceneMemberID="viewController">
+                <viewController id="ay4-nZ-1QD" customClass="FourthViewController" customModule="waricanDrive" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="U5Y-Yw-rkr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -709,12 +754,20 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="次へ"/>
+                                <connections>
+                                    <action selector="nextButtonPressed:" destination="ay4-nZ-1QD" eventType="touchUpInside" id="vux-gy-ekn"/>
+                                    <segue destination="RRB-AJ-gTT" kind="show" identifier="goToFifthScreen" id="6JW-kA-0oJ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DvA-GP-hGg">
                                 <rect key="frame" x="34" y="781" width="41" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="戻る"/>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="ay4-nZ-1QD" eventType="touchUpInside" id="emP-oc-ErE"/>
+                                    <segue destination="8fn-Lq-GiM" kind="show" identifier="backToThirdScreen" id="Ddb-Nl-Rsz"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -723,12 +776,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2bP-Oz-Cck" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2275" y="119"/>
+            <point key="canvasLocation" x="2273.913043478261" y="118.52678571428571"/>
         </scene>
-        <!--View Controller-->
+        <!--Eighth View Controller-->
         <scene sceneID="zRA-Ik-Tna">
             <objects>
-                <viewController id="E3l-3P-TnK" sceneMemberID="viewController">
+                <viewController id="E3l-3P-TnK" customClass="EighthViewController" customModule="waricanDrive" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1Xh-o7-Gdx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -835,12 +888,20 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="次へ"/>
+                                <connections>
+                                    <action selector="nextButtonPressed:" destination="E3l-3P-TnK" eventType="touchUpInside" id="iVY-E7-Qjx"/>
+                                    <segue destination="k6B-ii-j0g" kind="show" identifier="goToNinethScreen" id="ZFc-US-vfh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ejI-vu-SoD">
                                 <rect key="frame" x="34" y="781" width="41" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="戻る"/>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="E3l-3P-TnK" eventType="touchUpInside" id="7vU-jP-GcR"/>
+                                    <segue destination="FiN-nu-cFA" kind="show" identifier="backToSeventhScreen" id="m3F-pi-Z2u"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -851,10 +912,10 @@
             </objects>
             <point key="canvasLocation" x="4999" y="119"/>
         </scene>
-        <!--View Controller-->
+        <!--Nineth View Controller-->
         <scene sceneID="n29-Dl-BHa">
             <objects>
-                <viewController id="k6B-ii-j0g" sceneMemberID="viewController">
+                <viewController id="k6B-ii-j0g" customClass="NinethViewController" customModule="waricanDrive" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xat-oK-gqA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -976,12 +1037,20 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="次へ"/>
+                                <connections>
+                                    <action selector="nextButtonPressed:" destination="k6B-ii-j0g" eventType="touchUpInside" id="Z15-2y-Cb6"/>
+                                    <segue destination="Da6-Uk-iHh" kind="show" identifier="goToTenthScreen" id="w9F-aa-1EA"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mom-43-3nr">
                                 <rect key="frame" x="34" y="784" width="41" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="戻る"/>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="k6B-ii-j0g" eventType="touchUpInside" id="sg4-Ml-Drj"/>
+                                    <segue destination="E3l-3P-TnK" kind="show" identifier="backToEighthScreen" id="clU-Ic-XL3"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -992,10 +1061,10 @@
             </objects>
             <point key="canvasLocation" x="5678" y="119"/>
         </scene>
-        <!--View Controller-->
+        <!--Final View Controller-->
         <scene sceneID="C8t-9t-Jdc">
             <objects>
-                <viewController id="Da6-Uk-iHh" sceneMemberID="viewController">
+                <viewController id="Da6-Uk-iHh" customClass="FinalViewController" customModule="waricanDrive" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="34x-3O-HzD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1138,6 +1207,10 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="戻る"/>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="Da6-Uk-iHh" eventType="touchUpInside" id="gCg-6o-ZZE"/>
+                                    <segue destination="k6B-ii-j0g" kind="show" identifier="backToNinethScreen" id="dUD-gd-jfe"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1149,4 +1222,14 @@
             <point key="canvasLocation" x="6332" y="119"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="dUD-gd-jfe"/>
+        <segue reference="clU-Ic-XL3"/>
+        <segue reference="euh-ky-LNe"/>
+        <segue reference="6JW-kA-0oJ"/>
+        <segue reference="qwU-O0-qCX"/>
+        <segue reference="m3F-pi-Z2u"/>
+        <segue reference="Ddb-Nl-Rsz"/>
+        <segue reference="KpH-vF-wqr"/>
+    </inferredMetricsTieBreakers>
 </document>
